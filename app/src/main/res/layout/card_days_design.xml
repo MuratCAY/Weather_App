@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -22,12 +21,11 @@
                 android:id="@+id/hour_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9 AM"
+                android:text="@string/hour_9"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="@dimen/textSize20"
                 app:layout_constraintBottom_toTopOf="@+id/weather_img"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,9 +33,9 @@
                 android:id="@+id/weather_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toTopOf="@+id/heat_rv_text"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/hour_text"
                 app:srcCompat="@drawable/ic_cloudy2" />
@@ -46,12 +44,11 @@
                 android:id="@+id/heat_rv_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20 °C"
+                android:text="@string/heat_20"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="@dimen/textSize20"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/weather_img" />
         </androidx.constraintlayout.widget.ConstraintLayout>

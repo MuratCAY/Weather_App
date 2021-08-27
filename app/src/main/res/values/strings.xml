@@ -3,6 +3,48 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="month"><u>7 günlük hava durumu</u></string>
+    <string name="hour_6">6 AM</string>
+    <string name="hour_9">9 AM</string>
+    <string name="hour_12">12 PM</string>
+    <string name="hour_15">15 PM</string>
+    <string name="hour_18">18 PM</string>
+    <string name="hour_21">21 PM</string>
+    <string name="hour_24">24 PM</string>
+    <string name="heat_20">20°C</string>
+    <string name="heat_24">24°C</string>
+    <string name="heat_28">28°C</string>
+    <string name="heat_30">30°C</string>
+    <string name="heat_27">27°C</string>
+    <string name="heat_26">26°C</string>
+    <string name="heat_25">25°C</string>
+    <string name="translationX">translationX</string>
+    <string name="ic_rainy_black">ic_rainy_black</string>
+    <string name="ic_cloudy2">ic_cloudy2</string>
+    <string name="ic_weather">ic_weather</string>
+    <string name="ic_weather_sunnly">ic_weather_sunnly</string>
+    <string name="ic_sunny">ic_sunny</string>
+    <string name="pazartesi">Pazartesi</string>
+    <string name="sali">Salı</string>
+    <string name="carsamba">Çarşamba</string>
+    <string name="persembe">Perşembe</string>
+    <string name="cuma">Cuma</string>
+    <string name="cumartesi">Cumartesi</string>
+    <string name="pazar">Pazar</string>
+    <string name="hate_32">32°C</string>
+    <string name="hate_31">31°C</string>
+    <string name="hate_29">29°C</string>
+    <string name="drawable">drawable</string>
+    <string name="translationY">translationY</string>
+    <string name="rotation">rotation</string>
+    <string name="todo">TODO</string>
+    <string name="hosgeldiniz">HOŞGELDİNİZ \nKEKOD\'A SELAM VE SAYGILARIMLA</string>
+    <string name="next">Devam Et</string>
+    <string name="today">Bugün</string>
+    <string name="today_textview">Pazartesi, 30 Ağustos</string>
+    <string name="percent12">%12</string>
+    <string name="percent57">%57</string>
+    <string name="location_textviiew">Ataşehir, İstanbul</string>
+    <string name="gunler">Günler</string>
 
 
 </resources>

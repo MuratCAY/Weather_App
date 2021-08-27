@@ -18,6 +18,8 @@
         <entry key="..\:/Users/murat/AndroidStudioProjects/Weather_App/app/src/main/res/drawable/next_button.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/Weather_App/app/src/main/res/layout/activity_main.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/Weather_App/app/src/main/res/layout/card_days_design.xml" value="0.225" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/Weather_App/app/src/main/res/layout/card_month_design.xml" value="0.25" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/Weather_App/app/src/main/res/layout/fragment_month_day.xml" value="0.225" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/Weather_App/app/src/main/res/layout/fragment_splash.xml" value="0.25" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/Weather_App/app/src/main/res/layout/fragment_weather_page.xml" value="0.25" />
       </map>

@@ -11,8 +11,9 @@
         android:id="@+id/cloudly_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="@dimen/margin48"
+        android:layout_marginTop="@dimen/margin32"
+        android:contentDescription="@string/todo"
         android:src="@drawable/ic_cloudy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,9 +22,9 @@
         android:id="@+id/day_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bugün"
+        android:text="@string/today"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/textSize24"
         app:layout_constraintBottom_toTopOf="@+id/date_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
@@ -35,9 +36,9 @@
         android:id="@+id/date_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cumartesi, 28 Ağustos"
+        android:text="@string/today_textview"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="@dimen/textSize20"
         app:layout_constraintBottom_toBottomOf="@+id/cloudly_img"
         app:layout_constraintEnd_toEndOf="@+id/day_text"
         app:layout_constraintStart_toStartOf="@+id/day_text"
@@ -48,12 +49,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="30°C"
+        android:text="@string/heat_30"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date_text" />
 
@@ -65,15 +65,16 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/rainy_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_rainy" />
 
         <TextView
@@ -81,9 +82,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="%12"
+            android:text="@string/percent12"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="@dimen/textSize22"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -91,28 +92,29 @@
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin16"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/heat_text">
+        app:layout_constraintTop_toBottomOf="@+id/heat_text"
+        tools:ignore="UseCompoundDrawables">
 
 
         <ImageView
             android:id="@+id/moisture_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_moisturizing" />
 
         <TextView
             android:id="@+id/moisture_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="%57"
+            android:text="@string/percent57"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="@dimen/textSize22"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -121,19 +123,19 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin16"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="UseCompoundDrawables">
 
         <TextView
             android:id="@+id/location_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ataşehir, İstanbul"
+            android:text="@string/location_textviiew"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/white" />
 
@@ -141,7 +143,8 @@
             android:id="@+id/location_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/margin8"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_share" />
     </LinearLayout>
 
@@ -149,50 +152,55 @@
         android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/margin32"
+        android:layout_marginTop="@dimen/margin16"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="UseCompoundDrawables">
 
         <TextView
             android:id="@+id/today_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bugün"
+            android:text="@string/today"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="@dimen/textSize22"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/today_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/colorSpeed4"
+            android:contentDescription="@string/todo"
             android:src="@drawable/day_dot" />
     </LinearLayout>
 
-    <TextView
+    <Button
         android:id="@+id/month_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="@dimen/margin24"
+        android:layout_marginEnd="@dimen/margin32"
+        android:background="@android:color/transparent"
         android:text="@string/month"
-        android:textColor="@color/purple_700"
-        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/textSize18"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout4"
         app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="@dimen/margin0"
+        android:layout_height="@dimen/margin0"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 

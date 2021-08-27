@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.BounceInterpolator
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.weather_app.Temperature
+import com.example.weather_app.R
 import com.example.weather_app.adapter.TemperatureAdapter
 import com.example.weather_app.databinding.FragmentWeatherPageBinding
+import com.example.weather_app.model.Temperature
 
 class WeatherPageFragment : Fragment() {
     private val binding: FragmentWeatherPageBinding by lazy { FragmentWeatherPageBinding.inflate(layoutInflater) }
@@ -26,15 +29,15 @@ class WeatherPageFragment : Fragment() {
         binding.rv.setHasFixedSize(true)
         binding.rv.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL)
 
-        val t1 = Temperature("6 AM", "ic_rainy_black", "20°C")
-        val t2 = Temperature("9 AM", "ic_cloudy2", "24°C")
-        val t3 = Temperature("12 PM", "ic_weather", "28°C")
-        val t4 = Temperature("15 PM", "ic_weather_sunnly", "30°C")
-        val t5 = Temperature("18 PM", "ic_sunny", "27°C")
-        val t6 = Temperature("21 PM", "ic_cloudy2", "26°C")
-        val t7 = Temperature("24 PM", "ic_rainy_black", "25°C")
+        val t1 = Temperature(getString(R.string.hour_6), getString(R.string.ic_rainy_black), getString(R.string.heat_20))
+        val t2 = Temperature(getString(R.string.hour_9), getString(R.string.ic_cloudy2), getString(R.string.heat_24))
+        val t3 = Temperature(getString(R.string.hour_12), getString(R.string.ic_weather), getString(R.string.heat_28))
+        val t4 = Temperature(getString(R.string.hour_15), getString(R.string.ic_weather_sunnly), getString(R.string.heat_30))
+        val t5 = Temperature(getString(R.string.hour_18), getString(R.string.ic_sunny), getString(R.string.heat_27))
+        val t6 = Temperature(getString(R.string.hour_21), getString(R.string.ic_cloudy2), getString(R.string.heat_26))
+        val t7 = Temperature(getString(R.string.hour_24), getString(R.string.ic_rainy_black), getString(R.string.heat_25))
 
-        temperatureArrayList = ArrayList<Temperature>()
+        temperatureArrayList = ArrayList()
         temperatureArrayList.add(t1)
         temperatureArrayList.add(t2)
         temperatureArrayList.add(t3)
@@ -46,10 +49,16 @@ class WeatherPageFragment : Fragment() {
         adapter = TemperatureAdapter(requireContext(), temperatureArrayList)
         binding.rv.adapter = adapter
 
-        val animRv = ObjectAnimator.ofFloat(binding.rv,"translationX",800.0f,0.0f).apply {
-            duration = 2000
+        val animRv = ObjectAnimator.ofFloat(binding.rv, getString(R.string.translationX), 800.0f, 0.0f).apply {
+            duration = 3000
+            interpolator = BounceInterpolator()
         }
         animRv.start()
+
+        binding.monthDay.setOnClickListener {
+            val action = WeatherPageFragmentDirections.actionWeatherPageFragmentToMonthDayFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
         return binding.root
     }

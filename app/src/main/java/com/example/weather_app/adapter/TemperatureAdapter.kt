@@ -4,8 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.weather_app.Temperature
+import com.example.weather_app.R
 import com.example.weather_app.databinding.CardDaysDesignBinding
+import com.example.weather_app.model.Temperature
 
 class TemperatureAdapter(private val context: Context, private val temperatureList: List<Temperature>) : RecyclerView
 .Adapter<TemperatureAdapter.TemperatureViewHolder>() {
@@ -23,7 +24,7 @@ class TemperatureAdapter(private val context: Context, private val temperatureLi
             binding.hourText.text = temperature.hour
             binding.weatherImg.setImageResource(
                 context.resources.getIdentifier(
-                    temperature.weather_img, "drawable", context
+                    temperature.weather_img, context.getString(R.string.drawable), context
                         .packageName
                 )
             )
